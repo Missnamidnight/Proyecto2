@@ -1,0 +1,44 @@
+<app-componente1></app-componente1>
+<br>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-4 ">
+
+            <app-componente4></app-componente4>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-12">
+
+     <!--<button type="button"  (click)="intercambioContenido()" class="btn btn-light">Intercambiar valores</button>-->
+                     
+                    <div class="wrapper">
+                        <a type="button"  (click)="intercambioContenido()" class="button" href="#">Intercambiar valores</a>
+                    </div>
+                    
+
+                    <svg  style="visibility: hidden; position: absolute;" width="0" height="0">
+                        <defs >
+                            <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                            </filter>
+                        </defs>
+                    </svg>
+                    
+                    <app-componente2 [propiedad1]="curso1"  [propiedad2]="contador"></app-componente2>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+
+            <app-componente3 [propiedad1]="curso2"  [propiedad2]="contador"></app-componente3>
+                 </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
